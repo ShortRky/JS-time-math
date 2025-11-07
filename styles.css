@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #6b48ff, #48a9fe);
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transform: scale(0);
+    animation: popIn 0.5s ease forwards;
+}
+
+@keyframes popIn {
+    to {
+        transform: scale(1);
+    }
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.input-section {
+    margin-bottom: 2rem;
+}
+
+input {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    margin-right: 0.5rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #48a9fe;
+}
+
+button {
+    padding: 0.5rem 1.5rem;
+    font-size: 1.2rem;
+    background: #6b48ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+button:hover {
+    background: #48a9fe;
+    transform: scale(1.05);
+}
+
+.result {
+    font-size: 1.3rem;
+    color: #333;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 0.5s ease forwards;
+}
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
